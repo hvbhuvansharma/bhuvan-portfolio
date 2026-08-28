@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bhuvan Sharma H V — Computer Science & Business Systems undergraduate, designer and student leader.">
+<title>Bhuvan Sharma H V | Portfolio</title>
+<style>
+:root{
+  --bg:#08090c; --panel:#101217; --panel2:#151820; --text:#f4f5f7;
+  --muted:#a5a9b3; --line:#252a34; --accent:#8b5cf6; --accent2:#22d3ee;
+  --max:1120px; --radius:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:
+radial-gradient(circle at 80% 10%,rgba(139,92,246,.14),transparent 28%),
+radial-gradient(circle at 10% 35%,rgba(34,211,238,.08),transparent 24%),var(--bg);
+color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),92%);margin:auto}
+nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);width:min(1000px,92%);
+display:flex;align-items:center;justify-content:space-between;padding:12px 16px;
+background:rgba(10,11,15,.72);backdrop-filter:blur(18px);border:1px solid var(--line);
+border-radius:999px;z-index:20}
+.logo{font-weight:800;letter-spacing:.04em}
+.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:22px;font-size:14px;color:var(--muted)}
+.navlinks a:hover{color:var(--text)}
+.hero{min-height:100vh;display:grid;place-items:center;padding:120px 0 70px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center}
+.eyebrow{color:var(--accent2);font-size:13px;text-transform:uppercase;letter-spacing:.2em;font-weight:700;margin-bottom:18px}
+h1{font-size:clamp(48px,8vw,92px);line-height:.95;letter-spacing:-.055em;max-width:850px}
+.gradient{background:linear-gradient(110deg,#fff 20%,#c4b5fd 58%,#67e8f9);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:18px;color:var(--muted);max-width:670px;margin:25px 0}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:12px 18px;border-radius:999px;border:1px solid var(--line);background:var(--panel);
+font-weight:700;transition:.25s;display:inline-flex;gap:8px;align-items:center}
+.btn.primary{background:var(--text);color:#08090c;border-color:var(--text)}
+.btn:hover{transform:translateY(-2px);border-color:#555}
+.profile-card{background:linear-gradient(145deg,rgba(139,92,246,.18),rgba(34,211,238,.06) 50%,rgba(255,255,255,.03));
+border:1px solid var(--line);border-radius:30px;padding:28px;min-height:390px;display:flex;flex-direction:column;justify-content:space-between;
+box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.monogram{width:110px;height:110px;border-radius:28px;display:grid;place-items:center;font-size:38px;font-weight:900;
+background:linear-gradient(135deg,#8b5cf6,#22d3ee);color:#08090c}
+.profile-card h3{font-size:25px;margin-top:22px}
+.profile-card p{font-size:14px;margin:6px 0 0}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.badge{font-size:12px;border:1px solid var(--line);background:rgba(0,0,0,.2);padding:7px 10px;border-radius:999px;color:#d5d7dd}
+section{padding:95px 0}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}
+.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.18em;color:var(--accent2);font-weight:800}
+h2{font-size:clamp(32px,5vw,54px);letter-spacing:-.04em;line-height:1.05;margin-top:7px}
+.section-head p{max-width:470px;color:var(--muted)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:rgba(16,18,23,.78);border:1px solid var(--line);border-radius:var(--radius);padding:27px}
+.card p{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.stat strong{display:block;font-size:28px}.stat span{font-size:12px;color:var(--muted)}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.skill-group h3{font-size:16px;margin-bottom:12px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{border:1px solid var(--line);background:var(--panel2);padding:8px 11px;border-radius:12px;color:#d8dae0;font-size:13px}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.project{min-height:330px;display:flex;flex-direction:column}
+.project-num{font-size:12px;color:var(--accent2);font-weight:800;letter-spacing:.15em}
+.project h3{font-size:23px;margin:40px 0 10px;line-height:1.1}
+.project p{font-size:14px;color:var(--muted)}
+.project .tech{margin-top:auto;padding-top:24px;font-size:12px;color:#c7c9d0}
+.timeline{position:relative;display:grid;gap:14px}
+.timeline-item{display:grid;grid-template-columns:190px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--line)}
+.timeline-item .date{color:var(--accent2);font-size:13px;font-weight:700}
+.timeline-item h3{font-size:19px;margin-bottom:5px}.timeline-item p{color:var(--muted);font-size:14px}
+.interests{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.interest{padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}
+.interest b{font-size:18px}.interest p{color:var(--muted);font-size:13px;margin-top:5px}
+.contact{display:grid;grid-template-columns:1fr .8fr;gap:18px}
+.contact-main{padding:38px}.contact-main h2{max-width:600px}.contact-main p{color:var(--muted);margin:18px 0 24px}
+.contact-links{display:grid;gap:10px}.contact-link{padding:15px;border:1px solid var(--line);border-radius:14px;background:var(--panel);font-size:14px}
+.contact-link:hover{border-color:#555}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:12px;display:flex;justify-content:space-between}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:850px){
+ .hero-grid,.about,.contact{grid-template-columns:1fr}.projects{grid-template-columns:1fr}.skills,.interests{grid-template-columns:1fr}
+ .navlinks{display:none}.hero{padding-top:120px}.profile-card{min-height:300px}.section-head{display:block}.section-head p{margin-top:15px}
+ .timeline-item{grid-template-columns:1fr;gap:4px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="#home">BH<span>V.</span></a>
+  <div class="navlinks">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+    <a href="#leadership">Leadership</a><a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main id="home">
+<section class="hero">
+<div class="container hero-grid">
+  <div class="reveal">
+    <div class="eyebrow">Computer Science · Design · Leadership</div>
+    <h1>Building ideas with <span class="gradient">technology & creativity.</span></h1>
+    <p>I'm <strong>Bhuvan Sharma H V</strong>, a Computer Science & Business Systems undergraduate focused on Python, DBMS, AI-assisted development, UI/UX and technical project execution.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#projects">Explore my work ↓</a>
+      <a class="btn" href="https://www.linkedin.com/in/bhuvan-sharma-h-v-ab02b6410" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+  <aside class="profile-card reveal">
+    <div>
+      <div class="monogram">BS</div>
+      <h3>Bhuvan Sharma H V</h3>
+      <p>BE — Computer Science & Business Systems</p>
+      <div class="badges"><span class="badge">Python</span><span class="badge">DBMS</span><span class="badge">UI/UX</span><span class="badge">AI</span></div>
+    </div>
+    <div><p>Based in Bengaluru, India</p><p>2023 — 2027 · Ongoing</p></div>
+  </aside>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+ <div class="section-head reveal"><div><div class="kicker">01 / About</div><h2>Technical mind.<br>Creative edge.</h2></div>
+ <p>I combine software fundamentals with visual design, communication and student leadership to turn project ideas into clear, usable outcomes.</p></div>
+ <div class="about">
+  <div class="card reveal"><p>My experience spans academic technology projects, UI/UX design, technical documentation, AI and data integration, event organization, and team coordination.</p><p style="margin-top:14px">I enjoy working where technology meets creativity — from building interfaces and database workflows to editing visual content and leading teams.</p></div>
+  <div class="card reveal">
+   <div class="stats"><div class="stat"><strong>400–500</strong><span>Tech fest participants</span></div><div class="stat"><strong>3</strong><span>Featured projects</span></div><div class="stat"><strong>2027</strong><span>Expected graduation</span></div></div>
+  </div>
+ </div>
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+ <div class="section-head reveal"><div><div class="kicker">02 / Skills</div><h2>Tools I work with.</h2></div></div>
+ <div class="skills">
+  <div class="card skill-group reveal"><h3>Programming & Web</h3><div class="pills"><span class="pill">Python</span><span class="pill">C</span><span class="pill">C++</span><span class="pill">SQL</span><span class="pill">HTML</span><span class="pill">CSS</span></div></div>
+  <div class="card skill-group reveal"><h3>Database & Hardware</h3><div class="pills"><span class="pill">DBMS</span><span class="pill">Arduino Uno</span><span class="pill">Health Sensors</span><span class="pill">AI & Data Integration</span></div></div>
+  <div class="card skill-group reveal"><h3>Design</h3><div class="pills"><span class="pill">Figma</span><span class="pill">UI/UX Design</span><span class="pill">Technical Documentation</span><span class="pill">Presentation Design</span></div></div>
+  <div class="card skill-group reveal"><h3>Creative</h3><div class="pills"><span class="pill">DaVinci Resolve</span><span class="pill">Canva</span><span class="pill">CapCut</span><span class="pill">AI Tools</span></div></div>
+ </div>
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+ <div class="section-head reveal"><div><div class="kicker">03 / Projects</div><h2>Selected work.</h2></div><p>Academic projects combining hardware, software, databases, AI integration and user-focused design.</p></div>
+ <div class="projects">
+  <article class="card project reveal"><div class="project-num">PROJECT 01</div><h3>Healthcare Watch Model</h3><p>Wearable healthcare monitoring concept using health-monitoring sensors for real-time cardiac data tracking, with AI and data integration for health insights and risk-alert workflows.</p><div class="tech">Sensors · AI · Data Integration · UI/UX</div></article>
+  <article class="card project reveal"><div class="project-num">PROJECT 02</div><h3>Smart Door Locking System</h3><p>Automated access-control prototype using Arduino Uno and basic Python programming, with a structured workflow for secure access and streamlined interaction.</p><div class="tech">Arduino Uno · Python · UI/UX</div></article>
+  <article class="card project reveal"><div class="project-num">PROJECT 03</div><h3>Online Voting System</h3><p>Responsive digital voting interface using HTML, CSS and Python with a DBMS-backed workflow. Focused on organized voting operations, UI/UX and technical documentation.</p><div class="tech">HTML · CSS · Python · DBMS</div></article>
+ </div>
+</div>
+</section>
+
+<section id="leadership">
+<div class="container">
+ <div class="section-head reveal"><div><div class="kicker">04 / Leadership</div><h2>Leading from the front.</h2></div></div>
+ <div class="timeline">
+  <div class="timeline-item reveal"><div class="date">ACHIEVEMENT</div><div><h3>Best Branch Award</h3><p>Served as the main student leader and head of the branch, coordinating branch-wide student activities, communication and responsibilities that contributed to the branch receiving the college-level Best Branch award.</p></div></div>
+  <div class="timeline-item reveal"><div class="date">RECOGNITION</div><div><h3>Best Class Representative</h3><p>Recognized as Best Class Representative in an all-college competition.</p></div></div>
+  <div class="timeline-item reveal"><div class="date">NATIONAL EVENT</div><div><h3>Organizer — National-Level Tech Fest</h3><p>Led coordination and execution of a national-level technical festival with approximately 400–500 participants.</p></div></div>
+  <div class="timeline-item reveal"><div class="date">TECH CLUB</div><div><h3>Head — Design & Social Media Committee</h3><p>Led design, media and outreach activities for college technical events.</p></div></div>
+  <div class="timeline-item reveal"><div class="date">CULTURAL TEAM</div><div><h3>College Cultural Team Coordinator</h3><p>Managed event logistics, team coordination and participation across competitive college fests.</p></div></div>
+ </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+ <div class="section-head reveal"><div><div class="kicker">05 / Interests</div><h2>Beyond code.</h2></div></div>
+ <div class="interests">
+  <div class="interest reveal"><b>🎬 Video Editing</b><p>DaVinci Resolve · Canva · CapCut</p></div>
+  <div class="interest reveal"><b>🎨 Art & Visual Design</b><p>Creative exploration, visual storytelling and design.</p></div>
+  <div class="interest reveal"><b>🥊 Combat Sports</b><p>Discipline, focus and continuous improvement.</p></div>
+ </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container contact">
+ <div class="card contact-main reveal"><div class="kicker">06 / Contact</div><h2>Let's connect.</h2><p>Open to internships, collaborative projects and opportunities where technology, design and leadership come together.</p>
+ <a class="btn primary" href="Bhuvan_Sharma_HV_Resume.pdf" download>Download Resume ↓</a></div>
+ <div style="margin-top:18px"><a class="btn" href="Bhuvan_Sharma_HV_Resume.pdf" download>📄 Download my resume</a></div><div class="contact-links reveal">
+  <a class="contact-link" href="mailto:hvbhuvansharma@gmail.com">✉ hvbhuvansharma@gmail.com</a>
+  <a class="contact-link" href="tel:+919632311957">☎ +91 9632311957</a>
+  <a class="contact-link" href="https://www.linkedin.com/in/bhuvan-sharma-h-v-ab02b6410" target="_blank" rel="noopener">in LinkedIn profile ↗</a>
+  <div class="contact-link">📍 Bengaluru, India</div>
+ </div>
+</div>
+</section>
+</main>
+
+<footer class="container"><span>© 2026 Bhuvan Sharma H V</span><span>Built with purpose.</span></footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
